@@ -19,8 +19,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func getRandomDog(_ sender: Any) {
-        dogApiService.getRandomDog();
+        dogApiService.getRandomDog() { (data) in
+            print(data)
+            DispatchQueue.main.async() {
+                self.dogImage.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            }
+        }
     }
     
+    @IBOutlet weak var dogImage: UIImageView!
 }
 

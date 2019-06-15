@@ -56,15 +56,23 @@
 		5CD817CB22B587AF0022F278 /* Dogs */ = {
 			isa = PBXGroup;
 			children = (
-				5CD817CC22B587AF0022F278 /* AppDelegate.swift */,
+				5CD817E022B5952C0022F278 /* Supporting Files */,
 				5CD817CE22B587AF0022F278 /* ViewController.swift */,
-				5CD817D022B587AF0022F278 /* Main.storyboard */,
-				5CD817D322B587B00022F278 /* Assets.xcassets */,
-				5CD817D522B587B00022F278 /* LaunchScreen.storyboard */,
+				5CD817CC22B587AF0022F278 /* AppDelegate.swift */,
 				5CD817D822B587B00022F278 /* Info.plist */,
+				5CD817D022B587AF0022F278 /* Main.storyboard */,
 				5CD817DE22B58D660022F278 /* DogApiService.swift */,
 			);
 			path = Dogs;
+			sourceTree = "<group>";
+		};
+		5CD817E022B5952C0022F278 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CD817D322B587B00022F278 /* Assets.xcassets */,
+				5CD817D522B587B00022F278 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
