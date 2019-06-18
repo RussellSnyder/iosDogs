@@ -18,21 +18,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjU-08-IPc">
-                                <rect key="frame" x="120" y="90" width="115" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjU-08-IPc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="30"/>
                                 <state key="normal" title="Get Dog"/>
                                 <connections>
                                     <action selector="getRandomDog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0gF-ad-A5p"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uqg-tI-1iN">
-                                <rect key="frame" x="67" y="175" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uqg-tI-1iN">
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uqg-tI-1iN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="54R-vg-qRC"/>
+                            <constraint firstItem="uqg-tI-1iN" firstAttribute="top" secondItem="MjU-08-IPc" secondAttribute="bottom" id="6IA-qM-2x5"/>
+                            <constraint firstItem="MjU-08-IPc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8ip-PY-Zlx"/>
+                            <constraint firstItem="uqg-tI-1iN" firstAttribute="top" secondItem="MjU-08-IPc" secondAttribute="bottom" id="DzG-Sy-R0E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uqg-tI-1iN" secondAttribute="bottom" id="EAF-hj-PS4"/>
+                            <constraint firstItem="uqg-tI-1iN" firstAttribute="top" secondItem="MjU-08-IPc" secondAttribute="bottom" id="Gi5-qQ-Eym"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uqg-tI-1iN" secondAttribute="bottom" id="OcJ-dA-9T8"/>
+                            <constraint firstItem="MjU-08-IPc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QMY-D9-IoU"/>
+                            <constraint firstItem="uqg-tI-1iN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RGt-Tz-vlT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MjU-08-IPc" secondAttribute="trailing" id="WFI-mk-cs6"/>
+                            <constraint firstItem="uqg-tI-1iN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ef4-4g-Nrb"/>
+                            <constraint firstItem="uqg-tI-1iN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gD5-5f-DXc"/>
+                            <constraint firstItem="MjU-08-IPc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lG6-IT-N92"/>
+                            <constraint firstItem="uqg-tI-1iN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mUh-go-SOx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>

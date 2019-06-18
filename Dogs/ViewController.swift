@@ -9,8 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+
     let dogApiService = DogApiService()
-    
+
+    @IBOutlet weak var dogImage: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,14 +22,26 @@ class ViewController: UIViewController {
     }
 
     @IBAction func getRandomDog(_ sender: Any) {
-        dogApiService.getRandomDog() { (data) in
-            print(data)
-            DispatchQueue.main.async() {
-                self.dogImage.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        dogApiService.getRandomDog() { urlImageString in
+            if let url = URL(string: urlImageString) {
+                self.dogImage.load(url: url)
             }
         }
     }
     
-    @IBOutlet weak var dogImage: UIImageView!
 }
 
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+}
