@@ -10,14 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let dogApiService = DogApiService()
+    let dogApiService = DogCEOApiService()
 
     @IBOutlet weak var dogImage: UIImageView!
 
     override func viewDidLoad() {
+        print("dogs yo")
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         
     }
 

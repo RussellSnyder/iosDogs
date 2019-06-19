@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eqc-VT-Gaw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,62 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Dog Breed Table Table View Controller-->
+        <scene sceneID="SXh-y3-ug8">
+            <objects>
+                <tableViewController id="eqc-VT-Gaw" customClass="DogBreedTableTableViewController" customModule="Dogs" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="O5C-pp-jp8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DogBreedTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DogBreedTableViewCell" id="FyG-pq-b5P" customClass="DogBreedTableViewCell" customModule="Dogs" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FyG-pq-b5P" id="WmI-Ab-WM9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i36-uK-uqM">
+                                            <rect key="frame" x="152" y="10.5" width="154" height="22.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L9g-Fe-2yP" userLabel="Breed Image">
+                                            <rect key="frame" x="0.0" y="11" width="144" height="21.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="144" id="Vyc-IO-8JT"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="L9g-Fe-2yP" firstAttribute="top" secondItem="WmI-Ab-WM9" secondAttribute="topMargin" id="4Mw-Nn-Hs4"/>
+                                        <constraint firstItem="L9g-Fe-2yP" firstAttribute="leading" secondItem="WmI-Ab-WM9" secondAttribute="leading" id="AQB-XI-2Sy"/>
+                                        <constraint firstItem="i36-uK-uqM" firstAttribute="centerY" secondItem="WmI-Ab-WM9" secondAttribute="centerY" id="CXL-Ch-oPT"/>
+                                        <constraint firstItem="L9g-Fe-2yP" firstAttribute="centerY" secondItem="WmI-Ab-WM9" secondAttribute="centerY" id="NiE-EH-5ai"/>
+                                        <constraint firstItem="i36-uK-uqM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="L9g-Fe-2yP" secondAttribute="trailing" constant="8" symbolic="YES" id="XJ9-rO-o0s"/>
+                                        <constraint firstItem="i36-uK-uqM" firstAttribute="bottom" secondItem="WmI-Ab-WM9" secondAttribute="bottomMargin" id="b56-wk-8oB"/>
+                                        <constraint firstItem="i36-uK-uqM" firstAttribute="leading" secondItem="L9g-Fe-2yP" secondAttribute="trailing" constant="8" symbolic="YES" id="fCo-LG-YcS"/>
+                                        <constraint firstAttribute="trailing" secondItem="i36-uK-uqM" secondAttribute="trailing" constant="69" id="jzg-pv-d5t"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="breedImage" destination="L9g-Fe-2yP" id="bT8-Rj-7Jc"/>
+                                    <outlet property="breedLabel" destination="i36-uK-uqM" id="1hJ-0K-HmD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eqc-VT-Gaw" id="FFl-yA-6bj"/>
+                            <outlet property="delegate" destination="eqc-VT-Gaw" id="lEG-Xo-s8F"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNs-Al-MWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1258.4000000000001" y="-609.44527736131943"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
